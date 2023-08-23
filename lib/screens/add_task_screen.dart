@@ -35,7 +35,7 @@ class AddTask extends StatelessWidget {
                 },
               ),
               ElevatedButton(onPressed: (){
-              Provider.of<TaskData>(context).addTask(newListTitle!);
+              Provider.of<TaskData>(context, listen: false).addTask(newListTitle!);
                Navigator.pop(context);
               }, child: Text('Add'))
             ],
